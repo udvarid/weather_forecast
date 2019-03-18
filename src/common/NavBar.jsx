@@ -14,11 +14,12 @@ function NavBar() {
     };
 
     if (username != null) {
+        const actualUser = JSON.parse(localStorage.getItem('user'));
         logMeOut = () => {
             return (
                 <div className="navbar-nav ml-auto justify-content-right">
                     <ul className="navbar-nav ml-auto justify-content-right">
-                        <li className="nav-item"><Link className="nav-link" to="/Logout">Logout</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/Logout">{actualUser.userName} - Logout</Link></li>
                     </ul>
                 </div>
             )
