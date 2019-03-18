@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fe38176-1247-4b11-a9b8-b19b730b853c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/NewCity.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/NavBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/City.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/City.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewCity.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewCity.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/NavBar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+            <state relative-caret-position="440">
+              <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -200,7 +196,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552917125941" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552920727029" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/lib/javafx-sdk-11.0.1/lib/javafx.web.jar!/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -253,7 +249,7 @@
       <option name="presentableId" value="Default" />
       <updated>1552764716926</updated>
       <workItem from="1552764721289" duration="3425000" />
-      <workItem from="1552828180837" duration="14125000" />
+      <workItem from="1552828180837" duration="14617000" />
     </task>
     <task id="LOCAL-00001" summary="The base structure (login/logout/tabs) are ready">
       <created>1552904946783</created>
@@ -262,11 +258,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552904946783</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Lets start with the weather forecast">
+      <created>1552917172337</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1552917172337</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17550000" />
+    <option name="totallyTimeSpent" value="18042000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -318,7 +321,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="The base structure (login/logout/tabs) are ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="The base structure (login/logout/tabs) are ready" />
+    <MESSAGE value="Lets start with the weather forecast" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lets start with the weather forecast" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -441,8 +445,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/NavBar.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+        <state relative-caret-position="440">
+          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
