@@ -39,7 +39,7 @@ class LogMeIn extends Component{
             const detailedNewUser = {
                 userName: this.state.userName,
                 password: this.state.password,
-                city : ['Budapest', 'Bécs', 'Berlin']
+                city : ['Budapest', 'Vienna', 'Berlin']
             };
             if (users == null) {
                 const userTosave = [detailedNewUser];
