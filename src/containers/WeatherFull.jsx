@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import LogMeIn from "../components/LogMeIn";
+import LogMeIn from "../components/LogMeIn/LogMeIn";
 import Weather from "../components/Weather";
 
 class WeatherFull extends Component {

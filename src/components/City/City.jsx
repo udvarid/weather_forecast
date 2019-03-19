@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import {
     LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
+import './City.css';
 
 class City extends Component {
 
@@ -33,22 +34,21 @@ class City extends Component {
                 celsius = "" + (Math.round((findCelsius.main.temp - 273.15) * 100) / 100) + " Celsius";
                 humidity = "" + findCelsius.main.humidity + " %";
                 pressure = "" + findCelsius.main.pressure + " hPa";
-                wind = "" + findCelsius.wind.speed +  "strenght with the direction of " + findCelsius.wind.deg;
+                wind = "" + findCelsius.wind.speed + " meter/sec with the direction of " + findCelsius.wind.deg + " degrees";
 
             }
 
 
-
             return (
-              <div>
-                  Actual temperature: {celsius} Celsius
-                  <br/>
-                  Humidity: {humidity}
-                  <br/>
-                  Pressure: {pressure}
-                  <br/>
-                  Wind: {wind}
-              </div>
+                <div className="actual-block">
+                    <h6>Actual temperature: {celsius}</h6>
+                    <br/>
+                    <h6>Humidity: {humidity}</h6>
+                    <br/>
+                    <h6>Pressure: {pressure}</h6>
+                    <br/>
+                    <h6>Wind: {wind}</h6>
+                </div>
             );
         };
 
@@ -58,50 +58,63 @@ class City extends Component {
             )[0];
 
 
-
             let data = [];
             if (findForecast !== undefined) {
                 findForecast.list.forEach(time => {
+
                     const timePoint = {
-                        time : 1, //time.dt
-                        temp : Math.round((time.main.temp - 273.15) * 100) / 100
+                        time: 1,
+                        temp: Math.round((time.main.temp - 273.15) * 100) / 100
                     };
                     data.push(timePoint);
                 })
+                console.log(data);
             }
 
-            console.log(data)
             return (
-                <LineChart
-                    width={500}
-                    height={300}
-                    data={data}
-                    margin={{
-                        top: 5, right: 30, left: 20, bottom: 5,
-                    }}
-                >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Line type="monotone" dataKey="temp" stroke="#8884d8" activeDot={{ r: 8 }} />
-                    <Line type="monotone" dataKey="time" stroke="#82ca9d" />
-                </LineChart>
+                <div className="forecast">
+                    <h5>5 day forecast</h5>
+                    <LineChart
+                        width={500}
+                        height={140}
+                        data={data}
+                        margin={{
+                            top: 5, right: 30, left: 20, bottom: 5,
+                        }}
+                    >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Line type="monotone" dataKey="temp" stroke="#8884d8" activeDot={{ r: 8 }} />
+                    </LineChart>
+                </div>
+
             )
         };
+
 
 
         return (
             <div>
                 <h1>{this.props.city}</h1>
 
-                {actualCelsius()}
-                {forecast()}
+                <div className="myFlex">
+                    <div>
+                        {actualCelsius()}
+                    </div>
+                    <div>
+                        {forecast()}
+                    </div>
+                </div>
 
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
 
-
-                <form onSubmit={this.removeCity}>
+                <form onSubmit={this.removeCity} className="delete-button">
                     <button> Remove city</button>
                 </form>
             </div>

@@ -1,0 +1,33 @@
+.myFlex {
+    display: flex;
+    justify-content:  center;
+    align-items: stretch;
+}
+
+.actual-block {
+    display: block;
+    text-align: left;
+    width: 100%;
+    border: 1px solid rgb(72, 117, 105);
+    padding: 20px 20px;
+    border-radius: 4px;
+    background-color: rgba(10, 93, 255, 0.55);
+    box-shadow: 2px 4px 12px rgba(72, 117, 105, 0.8);
+}
+
+.delete-button {
+    position: relative;
+    left: 550px;
+    border-radius: 12px;
+}
+
+.forecast {
+    display: block;
+    text-align: center;
+    width: 100%;
+    border: 1px solid rgb(72, 117, 105);
+    padding: 20px 20px;
+    border-radius: 4px;
+    background-color: rgba(24, 223, 255, 0.55);
+    box-shadow: 2px 4px 12px rgba(72, 117, 105, 0.8);
+}

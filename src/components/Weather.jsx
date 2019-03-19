@@ -2,8 +2,8 @@ import React, {Component, Fragment} from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import City from "./City";
-import NewCity from "./NewCity";
+import City from "./City/City";
+import NewCity from "./NewCity/NewCity";
 import axios from 'axios';
 
 

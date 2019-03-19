@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import './LogMeIn.css';
 
-class LogMeIn extends Component{
+class LogMeIn extends Component {
 
     state = {
-        userName : "",
-        password : ""
+        userName: "",
+        password: ""
     };
 
     inputChangedHandler = (event) => {
@@ -28,7 +29,7 @@ class LogMeIn extends Component{
             if (findUser == null) {
                 letIn = true;
                 newUser = true;
-            } else if (findUser.password === this.state.password){
+            } else if (findUser.password === this.state.password) {
                 letIn = true;
             } else {
                 alert("Incorrect password!");
@@ -39,7 +40,7 @@ class LogMeIn extends Component{
             const detailedNewUser = {
                 userName: this.state.userName,
                 password: this.state.password,
-                city : ['Budapest', 'Vienna', 'Berlin']
+                city: ['Budapest', 'Vienna', 'Berlin']
             };
             if (users == null) {
                 const userTosave = [detailedNewUser];
@@ -50,7 +51,6 @@ class LogMeIn extends Component{
                 localStorage.setItem('users', JSON.stringify(usersDetailed));
             }
         }
-
 
 
         if (letIn) {
@@ -66,35 +66,38 @@ class LogMeIn extends Component{
 
     render() {
         return (
-            <form onSubmit={this.validateMe}>
-                <div>
-                    <label className="control-label">Username:</label>
-                    <input
-                        type="text"
-                        name="userName"
-                        value={this.state.userName}
-                        onChange={this.inputChangedHandler}
-                        placeholder="Username"
-                        className="form-control"
-                        required={true}
-                    />
-                </div>
-                <br/>
-                <div>
-                    <label className="control-label">Password:</label>
-                    <input
-                        type="password"
-                        name="password"
-                        value={this.state.password}
-                        onChange={this.inputChangedHandler}
-                        placeholder="Password"
-                        className="form-control"
-                        required={true}
-                    />
-                </div>
-                <br/>
-                <button name="submit-login" type="submit" className="btn btn-secondary">Login</button>
-            </form>
+            <div className="logmein__container">
+                <form onSubmit={this.validateMe}>
+                    <div>
+                        <label className="control-label">Username:</label>
+                        <input
+                            type="text"
+                            name="userName"
+                            value={this.state.userName}
+                            onChange={this.inputChangedHandler}
+                            placeholder="Username"
+                            className="form-control"
+                            required={true}
+                        />
+                    </div>
+                    <br/>
+                    <div>
+                        <label className="control-label">Password:</label>
+                        <input
+                            type="password"
+                            name="password"
+                            value={this.state.password}
+                            onChange={this.inputChangedHandler}
+                            placeholder="Password"
+                            className="form-control"
+                            required={true}
+                        />
+                    </div>
+                    <br/>
+                    <button name="submit-login" type="submit" className="btn btn-secondary">Login</button>
+                </form>
+            </div>
+
         )
     }
 
